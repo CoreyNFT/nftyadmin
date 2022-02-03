@@ -13,9 +13,9 @@ import { PATH_AUTH } from '../../../routes/paths';
 import useAuth from '../../../hooks/useAuth';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
 // components
-import { string } from 'yup/lib/locale';
-import { FormProvider, RHFTextField, RHFCheckbox } from '../../../components/hook-form';
 import Iconify from '../../../components/Iconify';
+import { FormProvider, RHFTextField, RHFCheckbox } from '../../../components/hook-form';
+
 // ----------------------------------------------------------------------
 
 type FormValuesProps = {

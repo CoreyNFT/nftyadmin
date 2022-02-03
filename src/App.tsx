@@ -1,7 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
+import ThemeProvider from './theme';
 import Login from "./pages/auth/Login"
-import logo from './logo.svg';
+// editor
+import 'react-quill/dist/quill.snow.css';
+
+// lazy image
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+import 'react-lazy-load-image-component/src/effects/black-and-white.css';
+
+// components
+
 import './App.css';
 
 function App() {
@@ -21,7 +32,15 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Login />
+      <ThemeProvider>
+          <HelmetProvider>
+            <Router>
+              <Routes>
+                <Route path="/login" element={<Login />} />
+              </Routes>
+            </Router>
+          </HelmetProvider>
+      </ThemeProvider>
     </div>
   );
 }
