@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import ThemeProvider from './theme';
 import Login from "./pages/auth/Login"
+import Register from "./pages/auth/Register"
 // editor
 import 'react-quill/dist/quill.snow.css';
 
@@ -37,6 +38,7 @@ function App() {
             <Router>
               <Routes>
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
               </Routes>
             </Router>
           </HelmetProvider>
